@@ -33,7 +33,7 @@ return res.send(activity)
 } else {
 return res.status(404).json('Missing data')
 }
- 
+
 }
 )
 

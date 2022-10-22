@@ -56,7 +56,7 @@ router.get("/countries", async (req, res) => { // esta ruta trae la info de la a
         include: {
           model: Activities,
         }, // incluye las actividades
-      }); 
+      });
       res.status(200).send(names);
     }
 });
