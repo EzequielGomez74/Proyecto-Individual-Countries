@@ -1,3 +1,22 @@
+h1 {
+  font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    font-family: Copperplate, "Copperplate Gothic Light";
+    color: rgb(221, 239, 53);
+    background-color: #7f5d3e;
+    opacity: 0.9;
+   width: 20%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  
+}
+
 .App {
   text-align: center;
 }
