@@ -2,11 +2,11 @@ import axios from "axios";
 
 export function getCountries(){
     return async function(dispatch){
-        try{
-            const json = await axios.get('http://localhost:3001/countries');
-            return dispatch({
-                type: "GET_COUNTRIES",
-                payload: json.data
+        try{ // manejo de errores
+            const json = await axios.get('http://localhost:3001/countries'); // pide los paises
+            return dispatch({ // despacha la accion con el tipo y el payload
+                type: "GET_COUNTRIES", //tipo de accion que se va a despachar
+                payload: json.data 
         })
 } catch (error){
     console.log(error)
