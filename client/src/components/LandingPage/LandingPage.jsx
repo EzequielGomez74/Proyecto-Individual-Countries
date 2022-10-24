@@ -5,10 +5,11 @@ import './landing.css';
 export default function LandingPage() {
 	return (
 		<div >
-            <h1>COUNTRIE PI</h1>
+            <h1>🌎 PI COUNTRIES 🌎</h1>
 			<Link  to='/home'>
-				<button className="BotonIngreso" >INGRESAR</button>
+				<button className="BotonIngreso" >3, 2, 1... DESPEGUE✈️</button>
 			</Link>
+			
 		</div>
 	);
 }

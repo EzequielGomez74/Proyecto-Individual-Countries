@@ -1,35 +1,41 @@
-h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 0;
-    font-family: Copperplate, "Copperplate Gothic Light";
-    color: rgb(62, 13, 103);
-    background-color: #b2f2f2;
-    opacity: 0.9;
-   width: 20%;
+.cardprincipal{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-left: 40%;
+    background-color: burlywood;
+    margin-left: 36%;
     margin-top: 20px;
     margin-bottom: 10px;
+    width: 25%;
+    border-radius: 10px;
     
 }
 
-h5 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 0;
-    font-family: Copperplate, "Copperplate Gothic Light";
-    color: rgb(62, 13, 103);
-    background-color: #f1e480;
-    opacity: 0.9;
-   width: 20%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: 40%;
-    margin-bottom: 82px;
-   
+.cardprincipal h5 {
+  
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin: 0;
+        font-family: Copperplate, "Copperplate Gothic Light";
+        color: rgb(62, 13, 103);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cardprincipal h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0;
+        font-family: Copperplate, "Copperplate Gothic Light";
+        color: rgb(62, 13, 103);
+        align-items: center;
+        margin-bottom: 10px;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
+        
+        
+    }
     
-}

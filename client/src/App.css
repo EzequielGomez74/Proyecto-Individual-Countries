@@ -1,21 +1,22 @@
 h1 {
-  font-size: 3rem;
+  font-size: 35px;
     font-weight: 400;
-    margin: 0;
-    font-family: Copperplate, "Copperplate Gothic Light";
+    
+    font-family: Impact;
     color: rgb(221, 239, 53);
-    background-color: #7f5d3e;
-    opacity: 0.9;
-   width: 20%;
+    background-color: #492d13;
+    width: 40%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-left: 40%;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    margin-left: 30%;
+    margin-top: 120px;
+    border-radius: 8px;
+   
   
 }
+
+
 
 .App {
   text-align: center;

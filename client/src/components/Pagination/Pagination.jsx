@@ -39,33 +39,7 @@
 //     const pageNumbers = [];
 //     for(let i = 1; i <= Math.ceil(allCountries /countriesPerPage ); i++){ //redondea los personajes sobre la cantidad de personajes que tengo por pagina.
 //         pageNumbers.push(i); // lo pusheo ---> [1 al 25]
-//     }
 
-//     return (
-//       <div className="pag-div">
-//         <ul>
-//           {/* {pageNumbers.length > 1 && // si hay más de una página, muestra los botones de paginación */
-
-//             pageNumbers?.map((p, i) => // recorre el array de números de página
-//               p === currentPage ? ( // si el número de página es igual al número de página actual, muestra el botón de la página actual
-//                 <li key={i}> 
-//                   <button className="pag-btn" onClick={() => pagination(p)}> 
-//                   {/* // al hacer click, ejecuta la función paginate, que actualiza el estado de la página actual */}
-//                     {p}
-//                   </button>
-//                 </li>
-//               ) : (
-//                 <li key={i}>
-//                   <button className="pag-btn" onClick={() => pagination(p)}>
-//                     {p}
-//                   </button>
-//                 </li>
-//               )
-//             )}
-//         </ul>
-//       </div>
-//     );
-// }
 
 import React from "react";
 
