@@ -19,7 +19,7 @@ a {
     text-align: center;
     flex-direction: column;
     transition: all 0.4s ease;
-    cursor: pointer;
+    
   
 }
 
@@ -47,6 +47,7 @@ img{
 
 .card__container-title {
 color: #0d2d6e;
+
 font-weight: bolder;
 font-size: 17px;
 text-align: center;
@@ -57,13 +58,14 @@ text-transform: uppercase;
 }
 
 .card__container-subtitle {
-color: #f08e68;
+color: #1b035d;
+background-color: rgb(161, 158, 158);
 text-align: center;
 font-size: 17px;
 }
 
 .card__container-btn {
-margin: 1.5rem 1rem;
+margin: auto;
 display: inline-block;
 outline: 0;
 border: 0;
@@ -76,7 +78,7 @@ height: 48px;
 padding: 0 15px;
 font-size: 18px;
 border-radius: 6px;
-color: #36395a;
+color: #59382f;
 transition: box-shadow 0.15s ease,transform 0.15s ease;
 font-weight: bold;
 text-transform: uppercase;
