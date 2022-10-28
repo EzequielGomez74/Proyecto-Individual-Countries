@@ -1,19 +1,30 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './Card.css';
 
-
-export default function Card ({ name, image, continent, id}) { //destructuring
-    return ( //retorna la carta 
-        <div className="cardprincipal">      
-      <h3>{name}</h3>
-     
-     <img src={image} alt='img not found' /> 
-      <p>
+export default function Card({ name, image, continent, id }) {
+  return (
+    <>
+    <div className='Contenedor2'>
+    <div className='card__container'>
+             <div className='card__container-img'>
+          <img
+            
+            src={image}
+            alt='img'
+          />
+          </div>
+          
+          <h3 className='card__container-title'>{name}</h3>
+          <h5 className='card__container-subtitle'>{continent}</h5>
+          <Link to={`/countries/${id}`}>
+          <button className='card__container-btn'>Read more</button>
         
-    <h5>{continent}</h5>
-    
-    </p>
+      </Link>
       </div>
-        
-    );
+      </div>
+    </>
+  );
 }
+

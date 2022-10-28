@@ -79,18 +79,20 @@ export default function Home (){
                         pagination={pagination}
                         currentPage={currentPage}
                         />
+                        <div className="CardContainer">
                 {currentCountries?.map((c) => (
                     <div key={c.id} >
-                        <Link to = { "/home/" + c.id } >
-                        <Card
+                        
+                        <Card id={ c.id }
                             name = { c.name }
                             image = { c.image }
                             continent = { c.continent }
                             />
-                            </Link>     
-                    </div>                      
+                              
+                    </div>     
+                                     
                 ))}
-              
+              </div>
             </div>
                 
     )

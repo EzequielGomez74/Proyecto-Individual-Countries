@@ -8,6 +8,7 @@ const router = Router();
 const getAllCountries = async () => { // esta funcion trae la info de la api
   const apiUrl = await axios.get("https://restcountries.com/v3/all");
   const apiInfo = await apiUrl.data.map((el) => {
+    console.log(el);
     return {
       id: el.cca3,
       name: el.name.common,
