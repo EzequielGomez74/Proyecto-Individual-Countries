@@ -5,10 +5,10 @@ import {getCountries, filterContinent, filterActivities} from "../../redux/actio
 import Card from "../Card/Card";
 import {Link} from 'react-router-dom';
 import Pagination from "../Pagination/Pagination";
-import Search from "./Search.jsx"
-import "./Search.css"
-
+import SearchBar from "../SearchBar/SearchBar";
+import "../SearchBar/SearchBar.css"
 import './home.css';
+
 
 export default function Home (){
     const dispatch = useDispatch();
@@ -65,7 +65,7 @@ export default function Home (){
             <option value= "Antarctica">Antartida</option>
         </select>
         </div>
-        <Search />
+        <SearchBar />
         <div>
             <h4>Buscar por Actividades </h4>
             <select onClick={(e) => handleFilterContinent(e)}>
