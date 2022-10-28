@@ -97,10 +97,18 @@ export function deleteActivity(id) {
     });
   };
 }
-export function Clean() {
-  return {
-    type: 'CLEAN',
-  };
+export function getDetail(id) {
+  return async function (dispatch) {
+    try {
+      const json = await axios.get(`http://localhost:3001/countries/${id}`)
+      return dispatch({
+        type: 'GET_DETAIL',
+        payload: json.data
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
 
 
@@ -116,3 +124,4 @@ export const FILTER_ACTIVITY = 'FILTER_ACTIVITY';
 export const NEW_ACTIVITY = 'NEW_ACTIVITY';
 export const DELETE_ACTIVITY = 'DELETE_ACTIVITY';
 export const CLEAN = 'CLEAN';
+export const GET_DETAIL = 'GET_DETAIL';

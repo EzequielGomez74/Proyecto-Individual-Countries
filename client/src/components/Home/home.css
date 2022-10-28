@@ -57,3 +57,16 @@ h4 {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.BotonCarga{
+    align-items: center;
+    width: 14%;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    
+    font-size: 20px;
+    margin: 5px;
+    padding: 3px;
+    background-color: rgb(38, 115, 192);
+}

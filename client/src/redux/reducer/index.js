@@ -9,6 +9,7 @@ import {
   FILTER_ACTIVITY,
   NEW_ACTIVITY,
   DELETE_ACTIVITY,
+  GET_DETAIL,
 } from '../actions/index';
 
 const initialState = {
@@ -38,6 +39,12 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         countries: action.payload,
       };
+
+      case GET_DETAIL:
+            return {
+                ...state,
+                detail: action.payload,
+            };
 
     case GET_COUNTRIES_BY_ID:
       return {
