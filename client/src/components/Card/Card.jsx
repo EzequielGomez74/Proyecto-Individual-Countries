@@ -20,8 +20,8 @@ export default function Card({ name, image, continent, id }) {
           <h5 className='card__container-subtitle'>{continent}</h5>
           <Link to={`/countries/${id}`}>
           <button className='card__container-btn'>Read more</button>
+        </Link>
         
-      </Link>
       </div>
       </div>
     </>

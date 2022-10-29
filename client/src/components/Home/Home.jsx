@@ -85,7 +85,7 @@ export default function Home (){
                         <div className="CardContainer">
                 {currentCountries?.map((c) => (
                     <div key={c.id} >
-                        
+                        {/* //link details */}
                         <Card id={ c.id }
                             name = { c.name }
                             image = { c.image }
