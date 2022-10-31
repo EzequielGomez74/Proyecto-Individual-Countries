@@ -10,6 +10,7 @@ import {
   NEW_ACTIVITY,
   DELETE_ACTIVITY,
   GET_DETAIL,
+  CLEAN,
 } from '../actions/index';
 
 const initialState = {
@@ -115,9 +116,16 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
       };
+      case CLEAN:
+        return {
+          ...state,
+          detail: {},
+        };
+
     default:
       return { ...state };
   }
+
 }
 
 

@@ -1,17 +1,63 @@
 import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { getCountriesById } from '../../redux/actions/';
+import { Link , useParams } from 'react-router-dom';
+import { getCountriesById, Clean } from '../../redux/actions/';
+import ActivityCard from '../ActivityCard/ActivityCard';
+import './Details.css';
 
 
-export const DetailCountry = (props) => {
+
+export const DetailCountry = () => {
   const dispatch = useDispatch();
   const country = useSelector((state) => state.detail);
-  const id = props.match.params.id;
+  const { id } = useParams();
 
   useEffect(() => {
     dispatch(getCountriesById(id));
-  }, [dispatch, id]);
+    return dispatch(Clean());
+  }, [dispatch,id]);
+   
+
+  //  return (
+  //     ( 
+  //   <div>
+  //     <div>
+  //       <img src={details.image} alt={details.image} />
+  //       <div>
+  //         <h1>{details.name}</h1>
+  //         <h2>Capital: {details.capital}</h2>
+  //         <h2>Continents: {details.continent}</h2>
+  //         <h2>Subregion: {details.subregion}</h2>
+  //         <h2>Area: {details.area}</h2>
+  //         <h2>Poblation: {details.population}</h2>
+  //       </div>
+  //       <div className="bar">
+  //         <Link to={"/home"}>
+  //           <button className="btn">Volver</button>
+  //         </Link>
+  //       </div>
+  //     </div>
+  //     <div>
+  //       {details.activities?.map(el => {
+  //         return (
+  //           <div>
+  //             <ActivityCard
+  //             key={el.id}
+  //             name={el.name}
+  //             temporada={el.season}
+  //             duracion={el.duration}
+  //             dificultada={el.difficulty}
+  //             />
+  //           </div>
+  //         )
+  //       })}
+  //     </div>
+  //   </div>
+  //   )
+    
+   
+  // );
+  //     };
 
   return (
     <div className='country__info-page'>
@@ -42,16 +88,16 @@ export const DetailCountry = (props) => {
         <div className='separator'>Activities</div>
         <div className='country__info-activities'>
           {country.activities && country.activities.length ? (
-            country.activities.map((e) => {
+            country.activities.map((c) => {
               return (
                 <Link to='/activities'>
                   <div
                     className='country__info-activity'
-                    key={e.name}>
-                    <p>Name: {e.name}</p>
-                    <p>Difficulty: {e.difficulty}</p>
-                    <p>Duration: {e.duration}hs.</p>
-                    <p>Season: {e.season}</p>
+                    key={c.name}>
+                    <p>Name: {c.name}</p>
+                    <p>Difficulty: {c.difficulty}</p>
+                    <p>Duration: {c.duration}hs.</p>
+                    <p>Season: {c.season}</p>
                   </div>
                 </Link>
               );
@@ -78,5 +124,3 @@ export const DetailCountry = (props) => {
     </div>
   );
 };
-
-

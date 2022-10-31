@@ -42,7 +42,7 @@ export function getCountriesById(id) {
       let res = await axios.get(`http://localhost:3001/countries/${id}`);
       return dispatch({
         type: 'GET_COUNTRIES_BY_ID',
-        payload: res.data,
+        payload: res.data[0], 
       });
     } catch (error) {
       alert('Whoops! The country could not be found.');
@@ -109,6 +109,15 @@ export function getDetail(id) {
       console.log(error)
     }
   }
+}
+
+export function Clean () {
+  return function (dispatch) {
+    dispatch({
+      type: 'CLEAN',
+    });
+  };
+  
 }
 
 
