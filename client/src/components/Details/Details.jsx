@@ -2,8 +2,8 @@ import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link , useParams } from 'react-router-dom';
 import { getCountriesById, Clean } from '../../redux/actions/';
-import ActivityCard from '../ActivityCard/ActivityCard';
-import './Details.css';
+
+
 
 
 
@@ -18,46 +18,7 @@ export const DetailCountry = () => {
   }, [dispatch,id]);
    
 
-  //  return (
-  //     ( 
-  //   <div>
-  //     <div>
-  //       <img src={details.image} alt={details.image} />
-  //       <div>
-  //         <h1>{details.name}</h1>
-  //         <h2>Capital: {details.capital}</h2>
-  //         <h2>Continents: {details.continent}</h2>
-  //         <h2>Subregion: {details.subregion}</h2>
-  //         <h2>Area: {details.area}</h2>
-  //         <h2>Poblation: {details.population}</h2>
-  //       </div>
-  //       <div className="bar">
-  //         <Link to={"/home"}>
-  //           <button className="btn">Volver</button>
-  //         </Link>
-  //       </div>
-  //     </div>
-  //     <div>
-  //       {details.activities?.map(el => {
-  //         return (
-  //           <div>
-  //             <ActivityCard
-  //             key={el.id}
-  //             name={el.name}
-  //             temporada={el.season}
-  //             duracion={el.duration}
-  //             dificultada={el.difficulty}
-  //             />
-  //           </div>
-  //         )
-  //       })}
-  //     </div>
-  //   </div>
-  //   )
-    
-   
-  // );
-  //     };
+  
 
   return (
     <div className='country__info-page'>
@@ -115,12 +76,21 @@ export const DetailCountry = () => {
                 <span>Whoops!</span> there is no activity created yet
               </p>
               <Link to='/create'>
-                <button>Create one now!</button>
+                <button>Create one now! </button>
               </Link>
+             
+              <Link to='/home'>
+              <button> Back to home</button>
+                </Link>
+                
+                
+              
             </div>
+            
           )}
         </div>
       </div>
     </div>
+    
   );
 };

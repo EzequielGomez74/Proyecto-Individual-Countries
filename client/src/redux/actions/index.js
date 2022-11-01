@@ -42,7 +42,7 @@ export function getCountriesById(id) {
       let res = await axios.get(`http://localhost:3001/countries/${id}`);
       return dispatch({
         type: 'GET_COUNTRIES_BY_ID',
-        payload: res.data[0], 
+        payload: res.data[0], // [0] porque el array que devuelve el get es de un solo elemento y no de varios como en el get all countries (por eso no se usa el map) y el objeto que devuelve es un objeto y no un array de objetos 
       });
     } catch (error) {
       alert('Whoops! The country could not be found.');
