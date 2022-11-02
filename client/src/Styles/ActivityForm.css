@@ -1,0 +1,108 @@
+.bg{
+    
+   
+    padding: 10% 1% 14% 1%;
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: url("../Assets/formactv.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    background-attachment:fixed;
+}
+
+.create{
+    background-color: hsla(264, 5%, 21%, 0.644);
+    border-radius: 15px;
+    width: 80%;
+    height: 90%;
+    position: relative;
+    backdrop-filter: blur(3px);
+    padding: 20px;    
+    color: white;
+    margin: 4%;
+}
+
+.buttonToHome{
+    align-items: center;
+    width: 40%;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    border: 4px solid rgb(21, 21, 21) ;
+    font-size: 20px;
+    margin: 5px;
+    padding: 3px;
+    background-color: rgb(40,40,40);
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btncreate {
+    align-items: center;
+    width: 80px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    border: 4px solid rgb(21, 21, 21) ;
+    font-size: 20px;
+    margin: 5px;
+    padding: 3px;
+    background-color: rgb(40,40,40);
+}
+
+.errors{
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    height: 25px;
+    left: 50%;
+    right: 50%;
+    color:#ff0000; 
+    font-size: large;  
+}
+.c{
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.delete{
+    margin-left: 8px;
+    border-radius: 5px;
+}
+
+.inputCreate{
+    margin: 3%;
+    font-size: large;
+   
+}
+
+.inputCreate2{
+    margin: 2%;
+    font-size: large;
+
+}
+
+.input{
+    font-size: large;
+    width: 150px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.countryCreate{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    font-size: medium;
+    justify-items: left;
+    margin: 3%;
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+}
