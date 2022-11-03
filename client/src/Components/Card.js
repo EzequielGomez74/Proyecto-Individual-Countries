@@ -2,14 +2,14 @@ import React from "react";
 import "../Styles/Card.css";
 
 
-export default function Card({name, image, continent, population}) {
+export default function Card({name, flag, continent, population}) {
     return (
         <div className="cardComp">
         <div className="cardComp2">
 
                 <div className="leftCard">
                 <div className="flag">
-                    <img src= {image} className="flag"
+                    <img src= {flag} className="flag"
                     alt= "Flag not found"/>
                 </div>
                 </div>

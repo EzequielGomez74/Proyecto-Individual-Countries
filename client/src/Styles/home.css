@@ -3,7 +3,7 @@
     margin: 0;
     height: 100%;
     background-image: URL("../Assets/neon2.jpg");
-   background-size: cover; 
+    background-size: cover; 
     background-position: 100%;
     background-attachment:fixed;
     
@@ -39,7 +39,7 @@ background-color: rgba(23, 23, 23, 0.83);
 }
 
 .btnshome{
-  margin: 2%;
+  margin: 1%;
 }
 .showAll{
   border-radius: 15px;

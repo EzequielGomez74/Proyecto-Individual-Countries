@@ -9,6 +9,7 @@ FILTER_BY_CONTINENT,
 FILTER_BY_ACTIVITIES,
 POST_ACTIVITIES,
 DELETE_ACTIVITY,
+CLEAN,
 } from '../Actions';
 
 const initialState = {
@@ -128,6 +129,11 @@ function rootReducer ( state = initialState, action ){
             return {
                 ...state,
             };
+            case CLEAN:
+                return {
+                    ...state,
+                    countries: state.allCountries,
+                };
 
         case DELETE_ACTIVITY:
             return {

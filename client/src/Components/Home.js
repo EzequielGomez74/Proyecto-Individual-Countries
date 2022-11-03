@@ -181,7 +181,7 @@ export default function Home(){
                              
                             <Card
                             name = { c.name }
-                            image = { c.image }
+                            flag = { c.flag }
                             continent = { c.continent }
                             population = { c.population }
                             id = { c.id }

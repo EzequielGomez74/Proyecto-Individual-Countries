@@ -1,6 +1,8 @@
+
 .container{
     background-color:rgb(48, 48, 48);
     margin:0px;
+    background-image: url("../Assets/neon3.jpg");
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     display: flex;

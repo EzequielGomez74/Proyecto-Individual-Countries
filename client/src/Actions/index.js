@@ -10,6 +10,7 @@ export const FILTER_BY_ACTIVITIES = "FILTER_BY_ACTIVITIES";
 export const POST_ACTIVITIES = "POST_ACTIVITIES";
 export const GET_DETAIL = "GET_DETAIL"
 export const DELETE_ACTIVITY = "DELETE_ACTIVITY";
+export const CLEAN = "CLEAN";
 
 
 
@@ -122,3 +123,9 @@ export function deleteActivity(id) {
      }
   };
 };
+
+export function Clean() {
+    return {
+      type: "CLEAN",
+    };
+}
