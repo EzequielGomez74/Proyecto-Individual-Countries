@@ -129,17 +129,17 @@ function rootReducer ( state = initialState, action ){
             return {
                 ...state,
             };
-            case CLEAN:
-                return {
-                    ...state,
-                    countries: state.allCountries,
-                };
-
+            
         case DELETE_ACTIVITY:
             return {
                 ...state,
                 activities: state.activities.filter((a) => a.id !== action.payload)
             };    
+            case CLEAN:
+                return {
+                    ...state,
+                    countries: state.allCountries,
+                };
 
         default:
             return state; 

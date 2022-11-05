@@ -7,7 +7,7 @@ export default function LandingPage() {
     <div className="landing">
       <div className="containerlandin">
       <div>
-      <h1>Countries App</h1>
+      <h1> ¡PI COUNTRIES!</h1>
       </div>
       
       <div className="btnlandin">

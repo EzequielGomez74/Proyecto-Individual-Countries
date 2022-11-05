@@ -6,7 +6,7 @@
     width: 15em;
     border-radius: 1rem;
     color: rgb(46, 253, 253);
-    box-shadow: 0 0.4rem rgb(40,40,40);
+    box-shadow: 0 0.3rem rgb(40,40,40);
     cursor: pointer;
    }
 
@@ -32,6 +32,7 @@
     margin: 5px;
     padding: 3px;
     background-color: rgb(40,40,40);
+    margin-top: 10px;
 }
 
 .input-wrapper input:focus {

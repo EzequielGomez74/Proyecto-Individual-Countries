@@ -90,7 +90,7 @@ export default function Home(){
             <div className="head">
 
             <div>
-                <h1 className="tittle">Countries App</h1>
+                <h1 className="tittle">¡PI COUNTRIES!</h1>
             </div>
                 
             </div> 

@@ -193,7 +193,7 @@ export default function ActivityCreate(){
                             name="duration"
                             onChange={(e) => handleChange(e)}
                         /> <span>hrs</span>
-                        {errors.duration && <p className="errors">{errors.duration}</p>}  
+                        {errors.duration && <p className="errors">{errors.duration}</p>} 
                     </div>
 
                     {/* <div>
@@ -246,13 +246,13 @@ export default function ActivityCreate(){
                             ))}
                         </select>
                         <div className="countryCreate">
-                        {input.countries.map((c, i) => (
+                        {input.countries.map((c, i) => ( 
                             <ul className="c" key={i}>
                                 <li>{c}   </li>
-                                <button className="delete" onClick={(e) => handleDelete (e, c)}>x</button>
+                                <button className="delete" onClick={(e) => handleDelete (e, c)}>x</button> 
                             </ul>
                         ))}
-                        {errors.countries && <p className="errors">{errors.countries}</p>}
+                        {errors.countries && <p className="errors">{errors.countries}</p>} 
                     </div>
                     </div>
                     <button type="submit" className="btncreate">
