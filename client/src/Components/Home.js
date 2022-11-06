@@ -45,6 +45,7 @@ export default function Home(){
     useEffect( () => {
         if (!allCountries.length) {
         dispatch( getCountries())}
+        
     }, [ dispatch ]);
 
     useEffect( () => {

@@ -58,7 +58,7 @@ padding: 2%;
       .info1 {
       
         display:flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap; 
         justify-content: space-around;
         align-items: center;
         border: dotted rgba(234, 234, 234, 0.025);

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getDetail, deleteActivity } from "../Actions";
+import { getDetail, deleteActivity, Clean } from "../Actions";
 import "../Styles/detail.css";
 import globo from "../Assets/globo.jpg";
 
@@ -17,6 +17,7 @@ export default function Detail(props) {
     useEffect(() => {
         dispatch(getDetail(props.match.params.id));
         setCambio(true);   
+        return  () => { dispatch(Clean()) }
     }, [dispatch, props.match.params.id]);
 
     // function handleDelete(id){

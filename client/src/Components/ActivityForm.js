@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "../Styles/ActivityForm.css";
 
 function validate(input) {
-    let errors = {};
+    let errors = {}; 
 
     if(input.name) {
         errors.name = ""
@@ -31,17 +31,16 @@ function validate(input) {
 }
 
 export default function ActivityCreate(){
-    const dispatch = useDispatch();
-    const history = useHistory();
-    const countries = useSelector((state) => state.countries);
-    const [errors, setErrors] = useState({});
+    const dispatch = useDispatch(); 
+    const history = useHistory(); 
+    const countries = useSelector((state) => state.countries); 
+    const [errors, setErrors] = useState({}); 
 
-    useEffect(() => {
-        dispatch(getCountries());
-    }, [dispatch]);
+    useEffect(() => { 
+        dispatch(getCountries()); 
+    }, [dispatch]); 
 
-    const [ input, setInput ] = useState({
-        name: "",
+    const [ input, setInput ] = useState({ 
         difficulty: 0,
         duration: 0,
         season: "",
@@ -49,22 +48,22 @@ export default function ActivityCreate(){
         like: 0,
     });
 
-    function handleChange(e) {
-        setInput((input) => ({
+    function handleChange(e) { 
+        setInput((input) => ({ 
             ...input,
-            [e.target.name]: e.target.value,
+            [e.target.name]: e.target.value,  
         })
         );
     }
 
 
-    function handleSelectCountry(e) {
+    function handleSelectCountry(e) { 
         setInput((input) => ({
             ...input,
-            countries: [...input.countries, e.target.value,]
+            countries: [...input.countries, e.target.value,] 
         }));
 
-        setErrors(
+        setErrors( 
             validate({
                 ...input,
                 countries: [...input.countries, e.target.value],
@@ -72,7 +71,7 @@ export default function ActivityCreate(){
         )
     }
 
-    function handleSubmit(e) {
+    function handleSubmit(e) { 
         if (input.name  && input.duration && input.season && input.countries ) {
             e.preventDefault();
             dispatch(postActivity(input));
@@ -108,7 +107,7 @@ export default function ActivityCreate(){
             </Link>
             <h1>Add Activity</h1>
             <div className="form">
-                <form onSubmit={(e) => handleSubmit(e)}>
+                <form onSubmit={(e) => handleSubmit(e)}> 
 
                     <div className="inputCreate">
                         <span>Name:   </span>
@@ -120,7 +119,7 @@ export default function ActivityCreate(){
                             name="name"
                             onChange={(e) => handleChange(e)}
                         />
-                        {errors.name && <p className="errors">{errors.name}</p>}  
+                        {errors.name && <p className="errors">{errors.name}</p>} 
                     </div>
 
                     
