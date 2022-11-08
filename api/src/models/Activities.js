@@ -9,7 +9,7 @@ const { DataTypes } = require('sequelize');
 // Temporada (Verano, Otoño, Invierno o Primavera)
 
 // Luego le injectamos la conexion a sequelize.
-module.exports = (sequelize) => {
+module.exports = (sequelize) => { 
   // defino el modelo
   sequelize.define('activities', {
     

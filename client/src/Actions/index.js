@@ -52,11 +52,15 @@ export function getDetail(id) {
           type: "GET_DETAIL",
           payload: json.data,
         });
+        
       } catch (error) {
         alert("Id not found");
       }
+      
     };
+    
 };
+
 
 export function getActivities() {
     return async function (dispatch) {
@@ -111,12 +115,12 @@ export function postActivity(payload) {
 };
 
 export function deleteActivity(id) {
-  return async function (dispatch) {
-     try{
+  return async function (dispatch) { 
+     try{ 
       const activity = await axios.delete(`http://localhost:3001/activities/${id}`)
-      return dispatch({
-        type: DELETE_ACTIVITY,
-        payload: activity,
+      return dispatch({ 
+        type: DELETE_ACTIVITY, 
+        payload: activity, 
       });
      } catch (error){
       alert(error)

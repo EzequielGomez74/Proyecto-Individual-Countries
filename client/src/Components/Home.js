@@ -24,8 +24,9 @@ export default function Home(){
     const allCountries = useSelector((state) => state.countries);
     const activities = useSelector((state) => state.activities);
     
-    const [ currentPage, setCurrentPage ] = useState(1);
-    const [ countriesPerPage, setCountriesPerPage ] = useState(10);
+    let [ currentPage, setCurrentPage ] = useState(1);
+    let [ countriesPerPage, setCountriesPerPage ] = useState(10);
+    if (currentPage === 1) countriesPerPage = 9; 
    
     const indexLastCountry = currentPage * countriesPerPage;
     const indexFirstCountry = indexLastCountry - countriesPerPage;
@@ -45,12 +46,11 @@ export default function Home(){
     useEffect( () => {
         if (!allCountries.length) {
         dispatch( getCountries())}
+        dispatch( getActivities())
         
     }, [ dispatch ]);
 
-    useEffect( () => {
-        dispatch( getActivities())
-    }, [ dispatch ]);
+  
 
     function handleClick(e){
         e.preventDefault();

@@ -103,7 +103,7 @@ export default function Detail(props) {
                                     <button
                                     onClick={() =>
                                         dispatch(deleteActivity(a.country_activities.activityId),
-                                        window.location.reload(false))
+                                        window.location.reload(false)) 
                                     }>x</button>
                                     </div>
 

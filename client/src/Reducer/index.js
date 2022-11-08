@@ -113,9 +113,9 @@ function rootReducer ( state = initialState, action ){
         
         case FILTER_BY_ACTIVITIES:
        
-            state.countries = state.allCountries
+           const allCountries = state.allCountries
             let filteredbyActivity = action.payload === 'All'
-            ? state.allCountries : state.countries.filter((c) => {
+            ? state.allCountries : allCountries.filter((c) => {
                     const activities = c.activities.map((a) => a.name)
                     return activities.includes(action.payload)
 

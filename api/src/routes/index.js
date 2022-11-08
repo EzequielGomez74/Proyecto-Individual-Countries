@@ -24,7 +24,7 @@ const getCountries = async() => {
          });
 
         if (!dbCountries.length){
-        Country.bulkCreate(
+        Country.bulkCreate( 
             allCountries.data.map((c) => {
                 return{
                     id: c.cca3,
@@ -81,7 +81,7 @@ router.get("/countries/:id", async (req, res) => {
         // const { id } = req.params;
         // const country =  await Country.findByPk(id)
         const { id } = req.params;
-        const country =  await Country.findByPk(id, {
+        const country =  await Country.findByPk(id, { 
             include: {model: Activities,
             attributes: ['name', 'difficulty', 'duration', 'season'],
             through: { atributes: {}}
@@ -93,7 +93,7 @@ router.get("/countries/:id", async (req, res) => {
         if (country){
             res.status(200).json(country)
         } else {
-            res.status(400).json("Not country avaible wich such ID")
+            res.status(400).json("Not country available which such ID")
         }
     } catch (err) {
         console.log(err)
@@ -118,7 +118,7 @@ router.post("/activity", async (req, res) => {
     }  = req.body
 
     try {
-        const [createActivity, boolean] = await Activities.findOrCreate({
+        const [createActivity, boolean] = await Activities.findOrCreate({ 
             where:{
                 name,
             }, defaults:{
