@@ -10,15 +10,15 @@ export default function Detail(props) {
     
     const dispatch = useDispatch();
 
-    const [ cambio, setCambio] = useState(false);
+    const [ cambio, setCambio] = useState(false); 
     const detail = useSelector((state) => state.detail);
     const allActivities = useSelector((state) => state.activities)
 
     useEffect(() => {
         dispatch(getDetail(props.match.params.id));
         setCambio(true);   
-        return  () => { dispatch(Clean()) }
-    }, [dispatch, props.match.params.id]);
+        return  () => { dispatch(Clean()) } 
+    }, [dispatch, props.match.params.id]); 
 
     // function handleDelete(id){
     //     dispatch(deleteActivity(id));

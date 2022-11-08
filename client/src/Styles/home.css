@@ -1,13 +1,11 @@
 .home{
-    background-color: rgb(49, 49, 49);
     margin: 0;
-    height: 100%;
+    height: 249vh;
     background-image: URL("../Assets/neon2.jpg");
     background-size: cover; 
-    background-position: 100%;
+    background-position: 100%; 
     background-attachment:fixed;
     
-   
     
 }
 
