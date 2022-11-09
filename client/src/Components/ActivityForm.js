@@ -123,15 +123,7 @@ export default function ActivityCreate(){
                     </div>
 
                     
-                        {/* <input
-                            className="inputCreate"
-                            placeholder="Difficulty..."
-                            type="integer"
-                            value={input.difficulty}
-                            name="difficulty"
-                            onChange={(e) => handleChange(e)}
-                        />
-                        {errors.difficulty && <p>{errors.difficulty}</p>}   */}
+                        
 
                         <div className="inputCreate">
                             <label>Difficulty:    </label>
@@ -195,17 +187,7 @@ export default function ActivityCreate(){
                         {errors.duration && <p className="errors">{errors.duration}</p>} 
                     </div>
 
-                    {/* <div>
-                        <input
-                            className="inputCreate"
-                            placeholder="Season..."
-                            type="text"
-                            value={input.season}
-                            name="season"
-                            onChange={(e) => handleChange(e)}
-                        />
-                        {errors.season && <p>{errors.season}</p>}  
-                    </div> */}
+                   
 
                     <div className="inputCreate">
                         <span>Season:</span>

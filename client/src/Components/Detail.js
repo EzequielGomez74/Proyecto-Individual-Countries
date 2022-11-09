@@ -50,7 +50,7 @@ export default function Detail(props) {
 
                             <div>
                             <h2 className="tittle2">Region</h2>
-                            <h2>{detail.subregion ? detail.subregion : "Information not avaible"}</h2>
+                            <h2>{detail.subregion ? detail.subregion : "Information not available"}</h2>
                             </div>
 
                             <div>    
@@ -109,7 +109,7 @@ export default function Detail(props) {
                                     <p>Difficulty: {a.difficulty}</p>
                                     <p>Duration: {a.duration} hours</p>
                                     <p>Season: {a.season}</p>
-                                    <p> Number of Likes: {a.like}</p>
+                                   
                                     {console.log(a)}
                                     
                                 </div>    
