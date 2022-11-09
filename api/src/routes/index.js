@@ -49,7 +49,7 @@ const getCountries = async() => {
 
 router.get("/countries", async (req, res) => {
     const { name } = req.query;
-    const createDb = await getCountries();
+    const allinfo = await getCountries();
     const allCountries =  await Country.findAll({
         include: {model: Activities,
          attributes: ['name', 'difficulty', 'duration', 'season'],
@@ -78,8 +78,7 @@ router.get("/countries", async (req, res) => {
 
 router.get("/countries/:id", async (req, res) => {
     try{
-        // const { id } = req.params;
-        // const country =  await Country.findByPk(id)
+        
         const { id } = req.params;
         const country =  await Country.findByPk(id, { 
             include: {model: Activities,
@@ -157,3 +156,15 @@ router.post("/activity", async (req, res) => {
 
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+  

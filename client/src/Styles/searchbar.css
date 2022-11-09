@@ -5,7 +5,7 @@
     font-size: 1rem;
     width: 15em;
     border-radius: 1rem;
-    color: rgb(46, 253, 253);
+    color: rgba(192, 49, 78, 0.564);
     box-shadow: 0 0.3rem rgb(40,40,40);
     cursor: pointer;
    }
@@ -34,7 +34,14 @@
     background-color: rgb(40,40,40);
     margin-top: 10px;
 }
+.btn:hover {
+    color: black;
+    background-color: rgba(192, 49, 78, 0.564) ;
+    
+  }
 
 .input-wrapper input:focus {
-    outline-color: rgb(46, 253, 253);
+    outline-color: rgba(192, 49, 78, 0.564);
    }
+
+   

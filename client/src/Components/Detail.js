@@ -20,11 +20,7 @@ export default function Detail(props) {
         return  () => { dispatch(Clean()) } 
     }, [dispatch, props.match.params.id]); 
 
-    // function handleDelete(id){
-    //     dispatch(deleteActivity(id));
-    //     alert('Deleted')
-    // }
-   console.log(detail.activities)
+    
   
 
    

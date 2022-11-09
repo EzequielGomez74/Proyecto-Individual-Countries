@@ -171,6 +171,7 @@ export default function Home(){
                 countriesPerPage = { countriesPerPage }
                 allCountries = { allCountries.length }
                 paginate = { paginate }
+                currentPage = {currentPage}
                 />
             </div>
 
@@ -197,8 +198,14 @@ export default function Home(){
                 countriesPerPage = { countriesPerPage }
                 allCountries = { allCountries.length }
                 paginate = { paginate }
+                currentPage = {currentPage}
                 />
             </div>
+            <div className="btnHome">
+        <Link to="./">
+          <button className="btnHome2">Volver</button>
+        </Link>
+      </div>
 
 
 

@@ -1,6 +1,6 @@
 .home{
     margin: 0;
-    height: 249vh;
+    height: 257vh;
     background-image: URL("../Assets/neon2.jpg");
     background-size: cover; 
     background-position: 100%; 
@@ -42,6 +42,8 @@ background-color: rgba(23, 23, 23, 0.83);
 .btnshome{
   margin: 1%;
 }
+
+
 .showAll{
   border-radius: 15px;
   cursor: pointer;
@@ -51,6 +53,12 @@ background-color: rgba(23, 23, 23, 0.83);
     margin: 5px;
     padding: 4px;
     background-color: rgb(40,40,40);
+}
+
+.showAll:hover {
+  color: black;
+  background-color: rgba(192, 49, 78, 0.564) ;
+  
 }
 
 .select{   
@@ -125,3 +133,19 @@ flex-direction: column;
     margin: 2%;
     
  }
+
+
+ .btnHome2{
+  border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    border: 2px solid rgb(21, 21, 21);
+    font-size: 20px;
+    background-color: rgb(40,40,40);
+ }
+
+ .btnHome2:hover {
+  color: black;
+  background-color: rgba(192, 49, 78, 0.564) ;
+  
+}
