@@ -55,7 +55,7 @@ display: grid;
     max-height: 180px;
     width: 260px;
     border-radius: 15px; 
-    object-fit: contain;
+    object-fit: contain; 
       
 }
 .rightCardBottom{

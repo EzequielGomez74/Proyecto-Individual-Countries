@@ -40,12 +40,12 @@ export default function ActivityCreate(){
         dispatch(getCountries()); 
     }, [dispatch]); 
 
-    const [ input, setInput ] = useState({ 
-        difficulty: 0,
-        duration: 0,
+   const [input, setInput] = useState({
+        name: "",
+        difficulty: "",
+        duration: "",
         season: "",
         countries: [],
-        like: 0,
     });
 
     function handleChange(e) { 
@@ -83,7 +83,7 @@ export default function ActivityCreate(){
                 season: "",
                 countries: [],
             });
-            history.push("/home");
+            history.go(0); 
         } else {
             e.preventDefault();
             console.log(errors)

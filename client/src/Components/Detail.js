@@ -99,7 +99,7 @@ export default function Detail(props) {
                                     <button
                                     onClick={() =>
                                         dispatch(deleteActivity(a.country_activities.activityId),
-                                        window.location.reload(false)) 
+                                        window.location.reload(false)) //para que se actualice la pagina
                                     }>x</button>
                                     </div>
 

@@ -38,7 +38,7 @@ function rootReducer ( state = initialState, action ){
             return {
                 ...state,
                 activities: action.payload,
-            };
+            }; 
         
         case GET_DETAIL:
             return {
@@ -134,7 +134,7 @@ function rootReducer ( state = initialState, action ){
             return {
                 ...state,
                 activities: state.activities.filter((a) => a.id !== action.payload)
-            };    
+            };
             case CLEAN:
                 return {
                     ...state,

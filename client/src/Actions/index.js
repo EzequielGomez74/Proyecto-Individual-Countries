@@ -14,10 +14,10 @@ export const CLEAN = "CLEAN";
 
 
 
-export function getCountries() {
-    return async function (dispatch) {
+export function getCountries() { 
+    return async function (dispatch) { 
       try{
-      var json = await axios.get("http://localhost:3001/countries");
+      var json = await axios.get("http://localhost:3001/countries"); 
       return dispatch({
         type: "GET_COUNTRIES",
         payload: json.data,
@@ -62,18 +62,18 @@ export function getDetail(id) {
 };
 
 
-export function getActivities() {
-    return async function (dispatch) {
+export function getActivities() { //esto es para traer las actividades
+    return async function (dispatch) { //funcion asincrona que recibe un dispatch como parametro 
       try{
       var json = await axios.get("http://localhost:3001/activities");
-      return dispatch({
+      return dispatch({ //esto es para que el reducer reciba el dispatch
         type: "GET_ACTIVITIES",
         payload: json.data,
       });
     } catch (error){
       console.log(error)
     }
-    };
+    }; 
 };
 
 export function orderByName(payload) {

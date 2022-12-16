@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/Card.css";
 
 
-export default function Card({name, flag, continent, population}) {
+export default function Card({name, flag, continent, population, capital,subregion}) {
     return (
         <div className="cardComp">
         <div className="cardComp2">
@@ -19,14 +19,16 @@ export default function Card({name, flag, continent, population}) {
                     <div className="rightCardBottom">
                        
                         <div className="items">
-                            <p>Continent</p>
-                            <p>{continent}</p>                            
+                            <p>Capital</p>
+                            <p>{capital}</p>                            
                         </div>
                         <div className="items">
-                            <p>Population</p>
-                            <p>{population.toLocaleString("en-US")} </p>
+                            <p>subregion</p>
+                            <p>{subregion} </p>
                         </div>
+                       
                     </div>
+
                 </div>
                 
             

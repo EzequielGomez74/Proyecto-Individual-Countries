@@ -8,14 +8,14 @@ require ('dotenv').config();
 // Ejemplo: const authRouter = require('./auth.js');
 
 
-const router = Router();
+const router = Router(); 
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
 const getCountries = async() => {
     try{
-        const allCountries = await axios.get('https://restcountries.com/v3/all');
+        const allCountries = await axios.get('https://restcountries.com/v3/all/');
         const dbCountries = await Country.findAll({
             include: {model: Activities,
              attributes: ['name', 'difficulty', 'duration', 'season'],
@@ -117,7 +117,7 @@ router.post("/activity", async (req, res) => {
     }  = req.body
 
     try {
-        const [createActivity, boolean] = await Activities.findOrCreate({ 
+        const [createActivity, boolean] = await Activities.findOrCreate({ //findorcreate es para que no se repitan las actividades en la base de datos
             where:{
                 name,
             }, defaults:{
@@ -148,11 +148,16 @@ router.post("/activity", async (req, res) => {
     await Activities.destroy({
         where: {id: id}
     });
+    
     return res.status(200).json('Activity delete') 
+    
     } catch (error){
        return res.status(400).json(error)
+       
     }   
+    
 })
+
 
 
 module.exports = router;

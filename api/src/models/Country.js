@@ -27,7 +27,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     flag: {
-      type: DataTypes.TEXT,
+      type: DataTypes.TEXT, 
       allowNull: false,
     },
     continent: {

@@ -9,6 +9,7 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+  
 }
    
 .detail {
@@ -38,7 +39,7 @@
 }
 
 .flagdetail{
-border-radius: 15px;
+
 max-width: 350px;
 height: auto;
 padding: 2%;

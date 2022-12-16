@@ -20,7 +20,7 @@ import "../Styles/home.css";
 
 export default function Home(){
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch(); //usedispatch es un hook que me permite despachar acciones a mi store de redux 
     const allCountries = useSelector((state) => state.countries);
     const activities = useSelector((state) => state.activities);
     
@@ -171,7 +171,7 @@ export default function Home(){
                 countriesPerPage = { countriesPerPage }
                 allCountries = { allCountries.length }
                 paginate = { paginate }
-                currentPage = {currentPage}
+                currentPage = {currentPage} 
                 />
             </div>
 
@@ -184,10 +184,10 @@ export default function Home(){
                             <Card
                             name = { c.name }
                             flag = { c.flag }
-                            continent = { c.continent }
-                            population = { c.population }
+                            capital = { c.capital }
+                            subregion = { c.subregion }
                             id = { c.id }
-                            />
+                            /> 
                     </Link>     
                     </div>                      
                 ))}
