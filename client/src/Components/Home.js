@@ -185,7 +185,7 @@ export default function Home(){
                             name = { c.name }
                             flag = { c.flag }
                             capital = { c.capital }
-                            subregion = { c.subregion }
+                            continent = { c.continent }
                             id = { c.id }
                             /> 
                     </Link>     

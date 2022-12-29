@@ -23,8 +23,8 @@ export default function Card({name, flag, continent, population, capital,subregi
                             <p>{capital}</p>                            
                         </div>
                         <div className="items">
-                            <p>subregion</p>
-                            <p>{subregion} </p>
+                            <p>Continente</p>
+                            <p>{continent} </p>
                         </div>
                        
                     </div>
