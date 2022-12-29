@@ -13,10 +13,7 @@ export default function Pagination({countriesPerPage, allCountries, paginate, cu
 
   return(
     <div className="btnPag">
-      <button
-        onClick={() => 
-          paginate(currentPage === 1 ? pageNumbers.length : currentPage -1)}
-          > « </button>
+      
 
       {
         pageNumbers && pageNumbers.map(number => (
@@ -26,8 +23,7 @@ export default function Pagination({countriesPerPage, allCountries, paginate, cu
         ))
       }
 
-      <button onClick={() => paginate(currentPage === 0 ? currentPage : currentPage + 1)}
-      > » </button>
+      
     </div>
   )
 };

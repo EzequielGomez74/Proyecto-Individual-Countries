@@ -29,7 +29,7 @@ const getCountries = async() => {
                 return{
                     id: c.cca3,
                     name: c.name.official,
-                    flag: c.image[0],
+                    flag: c.flags[0],
                     continent: c.region,
                     subregion: c.subregion,
                     capital: c.capital ? c.capital[0] : "Not Capital reported",
