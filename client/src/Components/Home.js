@@ -156,7 +156,7 @@ export default function Home(){
                 <span className="span">by Activities</span>
                 <select onChange = { (e) => handleSelectByActivities(e)}>
                 <option value="All">All Countries</option>
-                {activities.map((a) => (
+                {activities?.map((a) => (
                     <option value={ a.name } key={ a.id }>{a.name}</option>
                 ))}
                 </select>
@@ -177,7 +177,7 @@ export default function Home(){
 
 
             <div className="cards">
-                {currentCountries.map((c) => (
+                {currentCountries?.map((c) => (
                     <div key={c.id} >
                         <Link to = { "/home/" + c.id } className = "linkCard">
                              
