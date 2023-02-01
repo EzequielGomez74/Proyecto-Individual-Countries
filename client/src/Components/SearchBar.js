@@ -13,9 +13,9 @@ function handleInputChange(e) {
     setName(e.target.value);
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e) { 
     e.preventDefault();
-    dispatch(getNameCountries(name));
+    dispatch(getNameCountries(name)); 
     setName("");
   }
 

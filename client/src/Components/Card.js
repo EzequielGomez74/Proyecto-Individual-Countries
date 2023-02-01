@@ -19,8 +19,8 @@ export default function Card({name, flag, continent, population, capital,subregi
                     <div className="rightCardBottom">
                        
                         <div className="items">
-                            <p>Capital</p>
-                            <p>{capital}</p>                            
+                            <p>Population</p>
+                            <p>{population}</p>                            
                         </div>
                         <div className="items">
                             <p>Continente</p>
