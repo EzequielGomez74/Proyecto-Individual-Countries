@@ -177,7 +177,7 @@ export default function Home(){
 
 
             <div className="cards">
-                {currentCountries?.map((c) => (
+                {currentCountries.map((c) => (
                     <div key={c.id} >
                         <Link to = { "/home/" + c.id } className = "linkCard">
                              
