@@ -17,7 +17,7 @@ export const CLEAN = "CLEAN";
 export function getCountries() { 
     return async function (dispatch) { 
       try{
-      var json = await axios.get("/countries"); 
+      var json = await axios.get("proyecto-individual-countries-production.up.railway.app/countries"); 
       return dispatch({
         type: "GET_COUNTRIES",
         payload: json.data,
@@ -32,7 +32,7 @@ export function getNameCountries(name) {
     return async function (dispatch) {
       try {
         const json = await axios.get(
-          "/countries?name=" + name
+          "proyecto-individual-countries-production.up.railway.app/countries?name=" + name
         );
         return dispatch({
           type: "GET_NAME_COUNTRIES",
@@ -47,7 +47,7 @@ export function getNameCountries(name) {
 export function getDetail(id) {
     return async function (dispatch) {
       try {
-        var json = await axios.get("/countries/" + id);
+        var json = await axios.get("proyecto-individual-countries-production.up.railway.app/countries/" + id);
         return dispatch({
           type: "GET_DETAIL",
           payload: json.data,
@@ -65,7 +65,7 @@ export function getDetail(id) {
 export function getActivities() { //esto es para traer las actividades
     return async function (dispatch) { //funcion asincrona que recibe un dispatch como parametro 
       try{
-      var json = await axios.get("/activities");
+      var json = await axios.get("proyecto-individual-countries-production.up.railway.app/activities");
       return dispatch({ //esto es para que el reducer reciba el dispatch
         type: "GET_ACTIVITIES",
         payload: json.data,
@@ -106,7 +106,7 @@ export function filterByActivities(payload) {
 
 export function postActivity(payload) {
     return async function () {
-      const json = await axios.post("/activity", payload);
+      const json = await axios.post("proyecto-individual-countries-production.up.railway.app/activity", payload);
       return {
         type: "POST_ACTIVITIES",
         json,
@@ -117,7 +117,7 @@ export function postActivity(payload) {
 export function deleteActivity(id) {
   return async function (dispatch) { 
      try{ 
-      const activity = await axios.delete(`/activities/${id}`)
+      const activity = await axios.delete(`proyecto-individual-countries-production.up.railway.app/activities/${id}`)
       return dispatch({ 
         type: DELETE_ACTIVITY, 
         payload: activity, 
